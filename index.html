@@ -1,13 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Card Design</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div>
-    <p>This Is a New version</p>
+  <div class="grid">
+    <article class="card" aria-labelledby="card-title-1">
+      <div class="media" style="background-image:url('https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?q=80&w=1200&auto=format&fit=crop');">
+        <div class="badge">Featured</div>
+      </div>
+      <div class="content">
+        <h3 id="card-title-1">Modern Workspace Essentials</h3>
+        <p class="lead">A curated set of items to make your desk productive and beautiful — ergonomic, durable, and minimal.</p>
+
+        <div class="tags" aria-hidden="true">
+          <span class="tag">Ergonomic</span>
+          <span class="tag">Minimal</span>
+          <span class="tag">Best Seller</span>
+        </div>
+
+        <div class="meta">
+          <div class="price">$129</div>
+          <div class="cta">
+            <button class="btn" aria-label="Share item">Share</button>
+            <button class="btn primary" aria-label="Add to cart">Add</button>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card" aria-labelledby="card-title-2">
+      <div class="media" style="background-image:url('https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1200&auto=format&fit=crop');">
+        <div class="badge">New</div>
+      </div>
+      <div class="content">
+        <h3 id="card-title-2">Noise-Cancelling Headphones</h3>
+        <p class="lead">Immersive sound with long battery life and comfortable memory-foam earcups for all-day use.</p>
+
+        <div class="tags" aria-hidden="true">
+          <span class="tag">Audio</span>
+          <span class="tag">Bluetooth</span>
+        </div>
+
+        <div class="meta">
+          <div class="price">$249</div>
+          <div class="cta">
+            <button class="btn" aria-label="View details">Details</button>
+            <button class="btn primary" aria-label="Buy now">Buy</button>
+          </div>
+        </div>
+      </div>
+    </article>
   </div>
 </body>
 </html>
