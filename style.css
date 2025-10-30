@@ -76,6 +76,38 @@ body {
   flex: 1;
 }
 
+/* new chip styles */
+.chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 6px;
+}
+.chip {
+  appearance: none;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  background: rgba(15, 23, 42, 0.02);
+  color: var(--muted);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.14s, color 0.14s, transform 0.08s;
+}
+.chip[aria-pressed="true"] {
+  background: linear-gradient(90deg, #536dfe, #7c4dff);
+  color: white;
+  border-color: rgba(83, 109, 254, 0.12);
+  box-shadow: 0 6px 18px rgba(83, 109, 254, 0.08);
+}
+.chip:hover {
+  background: rgba(15, 23, 42, 0.06);
+}
+.chip:active {
+  transform: translateY(1px);
+}
+
 h3 {
   margin: 0;
   font-size: 18px;
