@@ -173,6 +173,55 @@ p.lead {
   border-radius: 8px;
 }
 
+/* new chip styles */
+.chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 6px;
+
+  /* ensure we can draw the bottom divider */
+  position: relative;
+  padding-bottom: 10px;
+}
+/* 1px light gray divider under the chips container
+   using a subtle translucent gray (approx. #333 at low opacity) */
+.chips::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 4px; /* sits just under the chips row */
+  height: 1px;
+  background: rgba(51, 51, 51, 0.06); /* light gray divider */
+  pointer-events: none;
+}
+
+.chip {
+  appearance: none;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  background: rgba(15, 23, 42, 0.02);
+  color: var(--muted);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.14s, color 0.14s, transform 0.08s;
+}
+.chip[aria-pressed="true"] {
+  background: linear-gradient(90deg, #536dfe, #7c4dff);
+  color: white;
+  border-color: rgba(83, 109, 254, 0.12);
+  box-shadow: 0 6px 18px rgba(83, 109, 254, 0.08);
+}
+.chip:hover {
+  background: rgba(15, 23, 42, 0.06);
+}
+.chip:active {
+  transform: translateY(1px);
+}
+
 @media (max-width: 420px) {
   .card {
     min-height: 320px;
